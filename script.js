@@ -61,8 +61,6 @@ function navigateTo(newWindowName) {
 }
 
 function logOut(){
-  if ((currentWindowName + '.html') === window.location.href) {
-    window.open('login.html', '_self');
-    currentWindowName = '';    
-  }
+  window.open('login.html');
+  window.close();
 }
