@@ -10,7 +10,6 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background: white;
   }
   
   label{
@@ -20,7 +19,7 @@
     margin-left: 30px;
   }
   nav{
-    background: #838B83;
+    background: #8B836A;
     height: 81px;
     width: 100%;
   }
@@ -69,60 +68,26 @@
     transition: .5s;
   }
   
-  section{
-      height: calc(100vh - 81px);
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-direction: column;
-      gap: 20px;
-  }
-
-  header{
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-
-  header h1{
-    font-size: 40px;
-  }
-  .content-container{
-    width: 75%;
-    background: #DEDEDE;
-    padding: 5%;
-  }
-
-  .sec {
-    background-color: #4A5A5A;
-    padding: 5%;
-    border-radius: 20px;
-    position: relative;
-    margin: 20px;
-    color: white;
-    text-align: justify;
-  }
-
-
-  .sec-1,
-  .sec-3,
-  .sec-5 {
+  section {
+    background: url(Images/MainPages/Homepage.png) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 81px);
+    width: 100%;
     display: flex;
-    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
   }
   
-  .sec-2,
-  .sec-4,
-  .sec-6 {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 40px;
+  section .catchphrase{
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #dedede;
+    color: #161616;
+    height: max-content;
+    width: 400px;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 1;
   }
-
-  p, li{
-    margin: 10px;
-  }
-
-  .subtitle{
-    font-style: italic;
-  }
+  

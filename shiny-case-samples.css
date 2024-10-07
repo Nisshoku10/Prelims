@@ -20,7 +20,7 @@
     margin-left: 30px;
   }
   nav{
-    background: #838B83;
+    background: #8B836A;
     height: 81px;
     width: 100%;
   }
@@ -68,61 +68,48 @@
     background: #9cae9c;
     transition: .5s;
   }
-  
-  section{
-      height: calc(100vh - 81px);
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-direction: column;
-      gap: 20px;
-  }
 
-  header{
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-
-  header h1{
-    font-size: 40px;
-  }
-  .content-container{
-    width: 75%;
-    background: #DEDEDE;
-    padding: 5%;
-  }
-
-  .sec {
-    background-color: #4A5A5A;
-    padding: 5%;
-    border-radius: 20px;
+  .banner{
+    width: 100%;
+    height: calc(100vh - 80px);
+    text-align: center;
+    overflow: hidden;
     position: relative;
-    margin: 20px;
-    color: white;
-    text-align: justify;
   }
 
-
-  .sec-1,
-  .sec-3,
-  .sec-5 {
-    display: flex;
-    gap: 40px;
+  .banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 30%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1500px);
+    animation: autoRun  20s linear infinite;
   }
-  
-  .sec-2,
-  .sec-4,
-  .sec-6 {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 40px;
-  }
-
-  p, li{
-    margin: 10px;
+  .banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+      translateZ(350px);
   }
 
-  .subtitle{
-    font-style: italic;
+  @keyframes autoRun {
+    from{
+        transform: perspective(1500px) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1500px) rotateY(360deg);
+    }
+  }
+  .banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner h1 {
+    margin-top: 30px;
+    font-size: 50px;
   }

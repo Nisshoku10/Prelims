@@ -49,3 +49,39 @@ function showPassword(){
     x.type = "password";
   }
 }
+
+
+function logOut(){
+  if (!window.closed("not-shiny-homepage.html")){
+    window.open("login.html");
+    window.close("not-shiny-homepage.html");
+  }
+  else if (!window.closed("not-shiny-about.html")){
+    window.open("login.html");
+    window.close("not-shiny-about.html");
+  }
+  else if (!window.closed("not-shiny-case-tips.html")){
+    window.open("login.html");
+    window.close("not-shiny-case-tips.html");
+  }
+  else if (!window.closed("not-shiny-case-samples.html")){
+    window.open("login.html");
+    window.close("not-shiny-case-samples.html");
+  }
+  else if (!window.closed("shiny-homepage.html")){
+    window.open("login.html");
+    window.close("shiny-homepage.html");
+  }
+  else if (!window.closed("shiny-about.html")){
+    window.open("login.html");
+    window.close("shiny-about.html");
+  }
+  else if (!window.closed("shiny-case-tips.html")){
+    window.open("login.html");
+    window.close("shiny-case-tips.html");
+  }
+  else if (!window.closed("shiny-case-samples.html")){
+    window.open("login.html");
+    window.close("shiny-case-samples.html");
+  }
+}

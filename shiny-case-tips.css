@@ -20,7 +20,7 @@
     margin-left: 30px;
   }
   nav{
-    background: #838B83;
+    background: #8B836A;
     height: 81px;
     width: 100%;
   }
@@ -89,12 +89,12 @@
   }
   .content-container{
     width: 75%;
-    background: #DEDEDE;
+    background: #C5EEE6;
     padding: 5%;
   }
 
   .sec {
-    background-color: #4A5A5A;
+    background-color: #399483;
     padding: 5%;
     border-radius: 20px;
     position: relative;

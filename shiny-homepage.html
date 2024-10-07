@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Not Shiny</title>
-  <link rel="stylesheet" href="shiny-notshiny.css">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="shiny-homepage.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="icon" type="image/png" href="Images/MainPages/Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class = "navigation2">
-          <img src="Logo.png" alt="logo" class="logo">
+    <nav class = "navigation">
+      <img src="Images/MainPages/Logo.png" alt="logo" class="logo">
+      <label>PhoneFolio</label>
       <ul class = "lists">
         <li>
-          <a class="links" href ="#">About Us</a>
+          <a class="links" href ="shiny-homepage.html">Home</a>
         </li>
         <li>
-          <a class="links" href="#">Case Tips</a>
+          <a href ="shiny-about.html">About Us</a>
         </li>
         <li>
-          <a class="links" href="#">Case Samples</a>
+          <a href="shiny-case-tips.html">Case Tips</a>
+        </li>
+        <li>
+          <a href="shiny-case-samples.html">Case Samples</a>
+        </li>
+        <li>
+          <form>
+            <button type="submit" onclick="logOut()">LOG OUT</button>
+          </form>
         </li>
       </ul>
-      <button class="conts">Contact Us</button>
     </nav>
-  </header>
-  <section class="main-body">
-    <img src="Homepage.png" alt="coverpage" class="coverpage">
-    
-  </section>
+    <section class="homeBg">
+      <div class="catchphrase">
+        <h3>Case Your Moments!</h3>
+      </div>
+    </section>
   <script src="script.js"></script>
 </body>
 </html>
