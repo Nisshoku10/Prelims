@@ -1,3 +1,5 @@
+var currentWindowName = '';
+
 // values for username and password logins
 var user1 = "RegularUser";
 var user2 = "ShinyUser";
@@ -11,10 +13,12 @@ var passWord = document.getElementById("password");
 function submitButton() {
   try{
     if (userName.value === user1 && passWord.value === pass1) {
-      window.open("not-shiny-homepage.html");
+      currentWindowName = 'not-shiny-homepage';
+      currentWindowName = window.open("not-shiny-homepage.html");
       window.close("login.html");
     }
     else if (userName.value === user2 && passWord.value === pass2) {
+      currentWindowName = 'shiny-homepage';
       window.open("shiny-homepage.html");
       window.close("login.html");
     }
@@ -50,38 +54,15 @@ function showPassword(){
   }
 }
 
+function navigateTo(newWindowName) {
+  currentWindowName = newWindowName;
+  window.open(newWindowName + '.html', '_self');
+  
+}
 
 function logOut(){
-  if (!window.closed("not-shiny-homepage.html")){
-    window.open("login.html");
-    window.close("not-shiny-homepage.html");
-  }
-  else if (!window.closed("not-shiny-about.html")){
-    window.open("login.html");
-    window.close("not-shiny-about.html");
-  }
-  else if (!window.closed("not-shiny-case-tips.html")){
-    window.open("login.html");
-    window.close("not-shiny-case-tips.html");
-  }
-  else if (!window.closed("not-shiny-case-samples.html")){
-    window.open("login.html");
-    window.close("not-shiny-case-samples.html");
-  }
-  else if (!window.closed("shiny-homepage.html")){
-    window.open("login.html");
-    window.close("shiny-homepage.html");
-  }
-  else if (!window.closed("shiny-about.html")){
-    window.open("login.html");
-    window.close("shiny-about.html");
-  }
-  else if (!window.closed("shiny-case-tips.html")){
-    window.open("login.html");
-    window.close("shiny-case-tips.html");
-  }
-  else if (!window.closed("shiny-case-samples.html")){
-    window.open("login.html");
-    window.close("shiny-case-samples.html");
+  if ((currentWindowName + '.html') === window.location.href) {
+    window.open('login.html', '_self');
+    currentWindowName = '';    
   }
 }
